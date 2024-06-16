@@ -50,19 +50,28 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_bspc {
-            bindings = <&kp BACKSPACE>;
+        combo_delete {
+            bindings = <&kp DELETE>;
             key-positions = <1 2>;
+            timeout-ms = <30>;
         };
 
         combo_enter {
             bindings = <&kp ENTER>;
             key-positions = <4 5>;
+            timeout-ms = <30>;
         };
 
-        combo_delete {
-            bindings = <&kp DELETE>;
+        combo_backspace {
+            bindings = <&kp BACKSPACE>;
             key-positions = <13 14>;
+            timeout-ms = <30>;
+        };
+
+        combo_enter_2 {
+            bindings = <&kp ENTER>;
+            key-positions = <16 17>;
+            timeout-ms = <30>;
         };
     };
 
