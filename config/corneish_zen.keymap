@@ -34,7 +34,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
         };
 
         home_row_right: home_row_right {
@@ -44,7 +44,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
         };
     };
 
@@ -54,91 +54,91 @@
         combo_delete {
             bindings = <&kp DELETE>;
             key-positions = <1 2>;
-            timeout-ms = <20>;
+            timeout-ms = <10>;
         };
 
         combo_repeat {
             bindings = <&kp C_REPEAT>;
             key-positions = <4 5>;
-            timeout-ms = <20>;
+            timeout-ms = <10>;
         };
 
         combo_backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <13 14>;
-            timeout-ms = <20>;
+            timeout-ms = <10>;
         };
 
         combo_enter {
             bindings = <&kp ENTER>;
             key-positions = <16 17>;
-            timeout-ms = <20>;
+            timeout-ms = <10>;
         };
 
         combo_alt_left {
             bindings = <&kp LA(LEFT)>;
             key-positions = <25 26>;
-            timeout-ms = <20>;
+            timeout-ms = <10>;
         };
 
         combo_alt_right {
             bindings = <&kp LA(RIGHT)>;
             key-positions = <28 29>;
-            timeout-ms = <20>;
+            timeout-ms = <10>;
         };
 
         combo_m_ls {
             bindings = <&macro_ls>;
             key-positions = <1 2 3>;
-            timeout-ms = <30>;
+            timeout-ms = <10>;
         };
 
         combo_lsft_lctrl_n {
             bindings = <&kp LC(LS(N))>;
             key-positions = <4 2 3>;
-            timeout-ms = <30>;
+            timeout-ms = <10>;
         };
 
         combo_m_gmail {
             bindings = <&macro_gmail>;
             key-positions = <4 5 3>;
-            timeout-ms = <30>;
+            timeout-ms = <10>;
         };
 
         combo_m_app_username {
             bindings = <&macro_app_username>;
             key-positions = <13 14 15>;
-            timeout-ms = <30>;
+            timeout-ms = <10>;
         };
 
         combo_m_wpwd {
             bindings = <&macro_wpwd>;
             key-positions = <14 15 16>;
-            timeout-ms = <30>;
+            timeout-ms = <10>;
         };
 
         combo_m_wpin {
             bindings = <&macro_wpin>;
             key-positions = <15 16 17>;
-            timeout-ms = <30>;
+            timeout-ms = <10>;
         };
 
         combo_m_addr {
             bindings = <&macro_addr>;
             key-positions = <25 26 27>;
-            timeout-ms = <30>;
+            timeout-ms = <10>;
         };
 
         combo_lctrl_n {
             bindings = <&kp LC(N)>;
             key-positions = <26 27 28>;
-            timeout-ms = <30>;
+            timeout-ms = <10>;
         };
 
         combo_m_lrbrack_asterisk {
             bindings = <&macro_lrbrac_asterisk>;
             key-positions = <28 29 27>;
-            timeout-ms = <30>;
+            timeout-ms = <10>;
         };
     };
 
