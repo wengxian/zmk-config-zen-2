@@ -54,37 +54,37 @@
         combo_delete {
             bindings = <&kp DELETE>;
             key-positions = <1 2>;
-            timeout-ms = <30>;
+            timeout-ms = <10>;
         };
 
         combo_repeat {
             bindings = <&kp C_REPEAT>;
             key-positions = <4 5>;
-            timeout-ms = <30>;
+            timeout-ms = <10>;
         };
 
         combo_backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <13 14>;
-            timeout-ms = <30>;
+            timeout-ms = <10>;
         };
 
         combo_enter {
             bindings = <&kp ENTER>;
             key-positions = <16 17>;
-            timeout-ms = <30>;
+            timeout-ms = <10>;
         };
 
         combo_alt_left {
             bindings = <&kp LA(LEFT)>;
             key-positions = <25 26>;
-            timeout-ms = <30>;
+            timeout-ms = <10>;
         };
 
         combo_alt_right {
             bindings = <&kp LA(RIGHT)>;
             key-positions = <28 29>;
-            timeout-ms = <30>;
+            timeout-ms = <10>;
         };
 
         combo_m_ls {
@@ -181,7 +181,7 @@
         macro_addr: macro_addr {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp N9 &kp N1 &kp SPACE &kp LS(T) &kp A &kp N &kp G &kp L &kp I &kp N &kp SPACE &kp LS(H) &kp A &kp L &kp T &kp SPACE &kp LS(R) &kp O &kp A &kp D &kp SPACE &kp POUND &kp N2 &kp N7 &kp MINUS &kp N3 &kp N0 &kp N6 &kp SPACE &kp LS(S) &kp I &kp N &kp G &kp A &kp P &kp O &kp R &kp E &kp SPACE &kp N1 &kp N4 &kp N2 &kp N0 &kp N9 &kp N1>;
+            bindings = <&kp N9 &kp N1 &kp SPACE &kp LS(T) &kp A &kp N &kp G &kp L &kp I &kp N &kp SPACE &kp LS(H) &kp A &kp L &kp T &kp SPACE &kp LS(R) &kp O &kp A &kp D>;
             label = "MACRO_ADDR";
         };
 
