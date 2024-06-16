@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
 
 / {
@@ -56,8 +57,8 @@
             timeout-ms = <30>;
         };
 
-        combo_enter {
-            bindings = <&kp ENTER>;
+        combo_repeat {
+            bindings = <&kp C_REPEAT>;
             key-positions = <4 5>;
             timeout-ms = <30>;
         };
@@ -68,10 +69,127 @@
             timeout-ms = <30>;
         };
 
-        combo_enter_2 {
+        combo_enter {
             bindings = <&kp ENTER>;
             key-positions = <16 17>;
             timeout-ms = <30>;
+        };
+
+        combo_alt_left {
+            bindings = <&kp LA(LEFT)>;
+            key-positions = <25 26>;
+            timeout-ms = <30>;
+        };
+
+        combo_alt_right {
+            bindings = <&kp LA(RIGHT)>;
+            key-positions = <28 29>;
+            timeout-ms = <30>;
+        };
+
+        combo_m_ls {
+            bindings = <&macro_ls>;
+            key-positions = <1 2 3>;
+            timeout-ms = <30>;
+        };
+
+        combo_lsft_lctrl_n {
+            bindings = <&kp LC(LS(N))>;
+            key-positions = <4 2 3>;
+            timeout-ms = <30>;
+        };
+
+        combo_m_gmail {
+            bindings = <&macro_gmail>;
+            key-positions = <4 5 3>;
+            timeout-ms = <30>;
+        };
+
+        combo_m_app_username {
+            bindings = <&macro_app_username>;
+            key-positions = <13 14 15>;
+            timeout-ms = <30>;
+        };
+
+        combo_m_wpwd {
+            bindings = <&macro_wpwd>;
+            key-positions = <14 15 16>;
+            timeout-ms = <30>;
+        };
+
+        combo_m_wpin {
+            bindings = <&macro_wpin>;
+            key-positions = <15 16 17>;
+            timeout-ms = <30>;
+        };
+
+        combo_m_addr {
+            bindings = <&macro_addr>;
+            key-positions = <25 26 27>;
+            timeout-ms = <30>;
+        };
+
+        combo_lctrl_n {
+            bindings = <&kp LC(N)>;
+            key-positions = <26 27 28>;
+            timeout-ms = <30>;
+        };
+
+        combo_m_lrbrack_asterisk {
+            bindings = <&macro_lrbrac_asterisk>;
+            key-positions = <28 29 27>;
+            timeout-ms = <30>;
+        };
+    };
+
+    macros {
+        macro_ls: macro_ls {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp L &kp S &kp SPACE &kp MINUS &kp L &kp R &kp T &kp H>;
+            label = "MACRO_LS";
+        };
+
+        macro_gmail: macro_gmail {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp W &kp E &kp N &kp G &kp X &kp I &kp A &kp N &kp N6 &kp N4 &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
+            label = "MACRO_GMAIL";
+        };
+
+        macro_app_username: macro_app_username {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(D) &kp LS(N) &kp LS(B) &kp LS(L) &kp LS(A) &kp D &kp M &kp I &kp N &kp N0 &kp N2>;
+            label = "MACRO_APP_USERNAME";
+        };
+
+        macro_wpwd: macro_wpwd {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(T) &kp N2 &kp N3 &kp N1 &kp N1 &kp N6 &kp N5 &kp N6 &kp LS(H) &kp AT &kp LS(D) &kp N &kp LS(B) &kp AT &kp AT &kp AT>;
+            label = "MACRO_WPWD";
+        };
+
+        macro_wpin: macro_wpin {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N2 &kp N0 &kp N2 &kp N1 &kp N0 &kp N7 &kp N1 &kp N3>;
+            label = "MACRO_WPIN";
+        };
+
+        macro_addr: macro_addr {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N9 &kp N1 &kp SPACE &kp LS(T) &kp A &kp N &kp G &kp L &kp I &kp N &kp SPACE &kp LS(H) &kp A &kp L &kp T &kp SPACE &kp LS(R) &kp O &kp A &kp D &kp SPACE &kp POUND &kp N2 &kp N7 &kp MINUS &kp N3 &kp N0 &kp N6 &kp SPACE &kp LS(S) &kp I &kp N &kp G &kp A &kp P &kp O &kp R &kp E &kp SPACE &kp N1 &kp N4 &kp N2 &kp N0 &kp N9 &kp N1>;
+            label = "MACRO_ADDR";
+        };
+
+        macro_lrbrac_asterisk: macro_lrbrac_asterisk {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR &kp STAR &kp RPAR>;
+            label = "MACRO_LRBRAC_ASTERISK";
         };
     };
 
@@ -111,7 +229,7 @@
 &trans  &kp LC(LEFT)  &kp UP     &kp LC(RIGHT)  &kp HOME   &kp PG_UP    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp LEFT      &kp DOWN   &kp RIGHT      &kp END    &kp PG_DN    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp LC(Z)     &kp LC(X)  &kp LC(C)      &kp LC(V)  &kp LC(Y)    &trans  &trans  &trans  &trans  &trans  &trans
-                                 &trans         &trans     &trans       &trans  &trans  &trans
+                                 &mkp RCLK      &trans     &trans       &trans  &trans  &trans
             >;
 
             label = "NAV";
