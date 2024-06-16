@@ -33,7 +33,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <175>;
+            tapping-term-ms = <200>;
             flavor = "balanced";
         };
 
@@ -43,7 +43,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <175>;
+            tapping-term-ms = <200>;
             flavor = "balanced";
         };
     };
@@ -54,37 +54,37 @@
         combo_delete {
             bindings = <&kp DELETE>;
             key-positions = <1 2>;
-            timeout-ms = <10>;
+            timeout-ms = <20>;
         };
 
         combo_repeat {
             bindings = <&kp C_REPEAT>;
             key-positions = <4 5>;
-            timeout-ms = <10>;
+            timeout-ms = <20>;
         };
 
         combo_backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <13 14>;
-            timeout-ms = <10>;
+            timeout-ms = <20>;
         };
 
         combo_enter {
             bindings = <&kp ENTER>;
             key-positions = <16 17>;
-            timeout-ms = <10>;
+            timeout-ms = <20>;
         };
 
         combo_alt_left {
             bindings = <&kp LA(LEFT)>;
             key-positions = <25 26>;
-            timeout-ms = <10>;
+            timeout-ms = <20>;
         };
 
         combo_alt_right {
             bindings = <&kp LA(RIGHT)>;
             key-positions = <28 29>;
-            timeout-ms = <10>;
+            timeout-ms = <20>;
         };
 
         combo_m_ls {
