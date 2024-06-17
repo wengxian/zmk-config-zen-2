@@ -57,8 +57,8 @@
             timeout-ms = <10>;
         };
 
-        combo_repeat {
-            bindings = <&kp C_REPEAT>;
+        combo_right_mouse_click {
+            bindings = <&mkp RCLK>;
             key-positions = <4 5>;
             timeout-ms = <10>;
         };
@@ -138,6 +138,42 @@
         combo_m_lrbrack_asterisk {
             bindings = <&macro_lrbrac_asterisk>;
             key-positions = <28 29 27>;
+            timeout-ms = <10>;
+        };
+
+        combo_percent {
+            bindings = <&kp PERCENT>;
+            key-positions = <2 3>;
+            timeout-ms = <10>;
+        };
+
+        combo_asterisk {
+            bindings = <&kp ASTERISK>;
+            key-positions = <3 4>;
+            timeout-ms = <10>;
+        };
+
+        combo_left_parenthesis {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <14 15>;
+            timeout-ms = <10>;
+        };
+
+        combo_right_parenthesis {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <15 16>;
+            timeout-ms = <10>;
+        };
+
+        combo_less_than {
+            bindings = <&kp LESS_THAN>;
+            key-positions = <26 27>;
+            timeout-ms = <10>;
+        };
+
+        combo_greater_than {
+            bindings = <&kp GREATER_THAN>;
+            key-positions = <27 28>;
             timeout-ms = <10>;
         };
     };
