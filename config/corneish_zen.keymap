@@ -263,7 +263,7 @@
                              &trans  &trans  &trans              &trans  &trans  &trans
             >;
 
-            label = "FKEYS";
+            label = "FUNC";
         };
 
         navigation_layer {
@@ -296,7 +296,7 @@
                         &trans  &trans  &trans    &trans            &trans           &trans
             >;
 
-            label = "SETTINGS";
+            label = "SETTING";
         };
 
         symbols_layer {
@@ -307,7 +307,7 @@
                         &trans  &trans  &trans    &trans     &trans        &trans
             >;
 
-            label = "SYMBOLS";
+            label = "SYMBOL";
         };
 
         locks_layer {
@@ -318,7 +318,7 @@
                         &trans  &trans  &trans    &trans                         &trans   &trans
             >;
 
-            label = "LOCKS";
+            label = "LOCK";
         };
     };
 };
