@@ -57,6 +57,18 @@
             timeout-ms = <10>;
         };
 
+        combo_left_parenthesis {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <2 3>;
+            timeout-ms = <10>;
+        };
+
+        combo_right_parenthesis {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <3 4>;
+            timeout-ms = <10>;
+        };
+
         combo_right_mouse_click {
             bindings = <&mkp RCLK>;
             key-positions = <4 5>;
@@ -69,15 +81,15 @@
             timeout-ms = <10>;
         };
 
-        combo_left_parenthesis {
-            bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <2 3>;
+        combo_percent {
+            bindings = <&kp PERCENT>;
+            key-positions = <15 14>;
             timeout-ms = <10>;
         };
 
-        combo_right_parenthesis {
-            bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <3 4>;
+        combo_asterisk {
+            bindings = <&kp ASTRK>;
+            key-positions = <15 16>;
             timeout-ms = <10>;
         };
 
@@ -165,6 +177,18 @@
             timeout-ms = <10>;
         };
 
+        combo_tilde {
+            bindings = <&kp TILDE>;
+            key-positions = <19 20>;
+            timeout-ms = <10>;
+        };
+
+        combo_backslash {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <20 21>;
+            timeout-ms = <10>;
+        };
+
         combo_left_bracket {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <31 32>;
@@ -180,30 +204,6 @@
         combo_bt_clear_all {
             bindings = <&bt BT_CLR_ALL>;
             key-positions = <11 23 35>;
-            timeout-ms = <10>;
-        };
-
-        combo_percent {
-            bindings = <&kp PERCENT>;
-            key-positions = <15 14>;
-            timeout-ms = <10>;
-        };
-
-        combo_asterisk {
-            bindings = <&kp ASTRK>;
-            key-positions = <15 16>;
-            timeout-ms = <10>;
-        };
-
-        combo_tilde {
-            bindings = <&kp TILDE>;
-            key-positions = <19 20>;
-            timeout-ms = <10>;
-        };
-
-        combo_backslash {
-            bindings = <&kp BACKSLASH>;
-            key-positions = <20 21>;
             timeout-ms = <10>;
         };
     };
