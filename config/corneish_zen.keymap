@@ -201,8 +201,8 @@
             timeout-ms = <10>;
         };
 
-        combo_pipe {
-            bindings = <&kp PIPE>;
+        combo_backslash {
+            bindings = <&kp BACKSLASH>;
             key-positions = <20 21>;
             timeout-ms = <10>;
         };
@@ -325,9 +325,9 @@
 
         symbols_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp PLUS   &kp MINUS     &kp AT      &kp CARET      &kp TILDE  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp EQUAL  &kp UNDER     &kp AMPS    &kp PIPE       &kp COLON  &kp DOUBLE_QUOTES
-&trans  &trans  &trans  &trans  &trans  &trans    &kp EXCL   &kp QUESTION  &kp DOLLAR  &kp BACKSLASH  &kp GRAVE  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp PLUS   &kp MINUS     &kp AT    &kp CARET   &kp GRAVE  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp EQUAL  &kp UNDER     &kp AMPS  &kp PIPE    &kp COLON  &kp DOUBLE_QUOTES
+&trans  &trans  &trans  &trans  &trans  &trans    &kp EXCL   &kp QUESTION  &kp HASH  &kp DOLLAR  &trans     &trans
                         &trans  &trans  &trans    &trans     &trans        &trans
             >;
 
