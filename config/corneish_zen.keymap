@@ -182,6 +182,30 @@
             key-positions = <11 23 35>;
             timeout-ms = <10>;
         };
+
+        combo_percent {
+            bindings = <&kp PERCENT>;
+            key-positions = <15 14>;
+            timeout-ms = <10>;
+        };
+
+        combo_asterisk {
+            bindings = <&kp ASTRK>;
+            key-positions = <15 16>;
+            timeout-ms = <10>;
+        };
+
+        combo_tilde {
+            bindings = <&kp TILDE>;
+            key-positions = <19 20>;
+            timeout-ms = <10>;
+        };
+
+        combo_pipe {
+            bindings = <&kp PIPE>;
+            key-positions = <20 21>;
+            timeout-ms = <10>;
+        };
     };
 
     macros {
@@ -248,7 +272,7 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE   &kp Q                      &kp W                      &kp E                   &kp R                        &kp T    &kp Y  &kp U                          &kp I                            &kp O                        &kp P                           &kp BACKSLASH
+&kp ESCAPE   &kp Q                      &kp W                      &kp E                   &kp R                        &kp T    &kp Y  &kp U                          &kp I                            &kp O                        &kp P                           &kp DEL
 &kp TAB      &home_row_left LEFT_GUI A  &home_row_left LEFT_ALT S  &home_row_left LCTRL D  &home_row_left LEFT_SHIFT F  &kp G    &kp H  &home_row_right RIGHT_SHIFT J  &home_row_right RIGHT_CONTROL K  &home_row_right RIGHT_ALT L  &home_row_right RIGHT_GUI SEMI  &kp SQT
 &shift_caps  &kp Z                      &kp X                      &kp C                   &kp V                        &kp B    &kp N  &kp M                          &kp COMMA                        &kp DOT                      &kp FSLH                        &kp ENTER
                                                                    &mo 1                   &lt 2 SPACE                  &mo 3    &mo 4  &lt 5 BACKSPACE                &mo 6
@@ -301,9 +325,9 @@
 
         symbols_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp PLUS   &kp MINUS     &kp AT     &kp CARET    &kp TILDE  &kp DOLLAR
-&trans  &trans  &trans  &trans  &trans  &trans    &kp EQUAL  &kp UNDER     &kp ASTRK  &kp PERCENT  &kp COLON  &kp DOUBLE_QUOTES
-&trans  &trans  &trans  &trans  &trans  &trans    &kp EXCL   &kp QUESTION  &kp HASH   &kp AMPS     &kp GRAVE  &kp LC(ENTER)
+&trans  &trans  &trans  &trans  &trans  &trans    &kp PLUS   &kp MINUS     &kp AT      &kp CARET      &kp TILDE  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp EQUAL  &kp UNDER     &kp AMPS    &kp PIPE       &kp COLON  &kp DOUBLE_QUOTES
+&trans  &trans  &trans  &trans  &trans  &trans    &kp EXCL   &kp QUESTION  &kp DOLLAR  &kp BACKSLASH  &kp GRAVE  &trans
                         &trans  &trans  &trans    &trans     &trans        &trans
             >;
 
