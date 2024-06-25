@@ -165,6 +165,12 @@
             timeout-ms = <20>;
         };
 
+        combo_esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <6 7>;
+            timeout-ms = <20>;
+        };
+
         combo_left_brace {
             bindings = <&kp LEFT_BRACE>;
             key-positions = <7 8>;
@@ -174,6 +180,12 @@
         combo_right_brace {
             bindings = <&kp RIGHT_BRACE>;
             key-positions = <8 9>;
+            timeout-ms = <20>;
+        };
+
+        combo_enter_r {
+            bindings = <&kp ENTER>;
+            key-positions = <18 19>;
             timeout-ms = <20>;
         };
 
@@ -204,18 +216,6 @@
         combo_bt_clear_all {
             bindings = <&bt BT_CLR_ALL>;
             key-positions = <11 23 35>;
-            timeout-ms = <20>;
-        };
-
-        combo_esc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <6 7>;
-            timeout-ms = <20>;
-        };
-
-        combo_enter_r {
-            bindings = <&kp ENTER>;
-            key-positions = <18 19>;
             timeout-ms = <20>;
         };
     };
