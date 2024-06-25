@@ -269,6 +269,13 @@
             bindings = <&kp LPAR &kp STAR &kp RPAR>;
             label = "MACRO_LRBRAC_ASTERISK";
         };
+
+        macro_shutdown: macro_shutdown {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(D) &kp LA(F4)>;
+            label = "MACRO_SHUTDOWN";
+        };
     };
 
     keymap {
@@ -328,7 +335,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &kp LC(NUMBER_0)  &bt BT_SEL 0       &bt BT_SEL 1      &bt BT_SEL 2     &bt BT_SEL 3        &bt BT_SEL 4
 &trans  &trans  &trans  &trans  &trans  &trans    &kp LC(PLUS)      &kp C_VOLUME_DOWN  &kp C_MUTE        &kp C_VOLUME_UP  &kp LG(LEFT_ARROW)  &out OUT_USB
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LC(MINUS)     &kp C_PREV         &kp C_PLAY_PAUSE  &kp C_NEXT       &kp LG(RIGHT)       &out OUT_BLE
+&trans  &trans  &trans  &trans  &trans  &trans    &macro_shutdown   &kp C_PREV         &kp C_PLAY_PAUSE  &kp C_NEXT       &kp LG(RIGHT)       &out OUT_BLE
                         &trans  &trans  &trans    &trans            &trans             &trans
             >;
 
