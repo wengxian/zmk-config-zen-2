@@ -42,9 +42,9 @@ config ZMK_DISPLAY
     select LV_USE_LABEL
     select LV_USE_IMG
 
-#choice ZMK_DISPLAY_STATUS_SCREEN
-#    default ZMK_DISPLAY_STATUS_SCREEN_CUSTOM
-#endchoice
+choice ZMK_DISPLAY_STATUS_SCREEN
+    default ZMK_DISPLAY_STATUS_SCREEN_CUSTOM
+endchoice
 
 if ZMK_DISPLAY
 
