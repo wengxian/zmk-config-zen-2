@@ -213,15 +213,15 @@
             timeout-ms = <20>;
         };
 
-        combo_bt_clear_all {
-            bindings = <&bt BT_CLR_ALL>;
-            key-positions = <11 23 35>;
-            timeout-ms = <20>;
-        };
-
         combo_bt_clear_profile {
             bindings = <&bt BT_CLR>;
             key-positions = <6 18 30>;
+            timeout-ms = <20>;
+        };
+
+        combo_bt_clear_all {
+            bindings = <&bt BT_CLR_ALL>;
+            key-positions = <11 23 35>;
             timeout-ms = <20>;
         };
     };
