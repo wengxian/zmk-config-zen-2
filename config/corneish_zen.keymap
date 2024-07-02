@@ -20,13 +20,6 @@
 
 / {
     behaviors {
-        num_word: num_word {
-            compatible = "zmk,behavior-caps-word";
-            label = "NUM_WORD";
-            #binding-cells = <0>;
-            continue-list = <BACKSPACE DELETE DOT COMMA NUMBER_1 NUMBER_2 NUMBER_3 NUMBER_4 NUMBER_5 NUMBER_6 NUMBER_7 NUMBER_8 NUMBER_9 NUMBER_0 PLUS MINUS ASTERISK SLASH EQUAL>;
-        };
-
         shift_caps: shift_caps {
             compatible = "zmk,behavior-tap-dance";
             label = "SHIFT_CAPS";
@@ -231,6 +224,12 @@
             key-positions = <11 23 35>;
             timeout-ms = <20>;
         };
+
+        combo_function_layer {
+            bindings = <&tog 1>;
+            key-positions = <27 25>;
+            timeout-ms = <20>;
+        };
     };
 
     macros {
@@ -300,7 +299,7 @@
 &kp ESCAPE   &kp Q                      &kp W                      &kp E                   &kp R                        &kp T    &kp Y  &kp U                          &kp I                            &kp O                        &kp P                           &kp DEL
 &kp TAB      &home_row_left LEFT_GUI A  &home_row_left LEFT_ALT S  &home_row_left LCTRL D  &home_row_left LEFT_SHIFT F  &kp G    &kp H  &home_row_right RIGHT_SHIFT J  &home_row_right RIGHT_CONTROL K  &home_row_right RIGHT_ALT L  &home_row_right RIGHT_GUI SEMI  &kp SQT
 &shift_caps  &kp Z                      &kp X                      &kp C                   &kp V                        &kp B    &kp N  &kp M                          &kp COMMA                        &kp DOT                      &kp FSLH                        &kp ENTER
-                                                                   &mo 1                   &lt 2 SPACE                  &mo 3    &mo 4  &lt 5 BACKSPACE                &num_word
+                                                                   &kp LCTRL               &lt 2 SPACE                  &mo 3    &mo 4  &lt 5 BACKSPACE                &mo 6
             >;
         };
 
@@ -328,10 +327,10 @@
 
         number_layer {
             bindings = <
-&trans        &kp ASTRK  &kp N7  &kp N8  &kp N9  &kp PLUS     &trans  &trans  &trans  &trans  &trans  &trans
-&kp NUMBER_0  &kp FSLH   &kp N4  &kp N5  &kp N6  &kp MINUS    &trans  &trans  &trans  &trans  &trans  &trans
-&trans        &kp EQUAL  &kp N1  &kp N2  &kp N3  &kp DOT      &trans  &trans  &trans  &trans  &trans  &trans
-                                 &trans  &trans  &trans       &trans  &trans  &trans
+&trans        &kp ASTRK                      &kp N7  &kp N8  &kp N9  &kp PLUS     &trans  &trans  &trans  &trans  &trans  &trans
+&kp NUMBER_0  &home_row_left LEFT_GUI SLASH  &kp N4  &kp N5  &kp N6  &kp MINUS    &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &kp EQUAL                      &kp N1  &kp N2  &kp N3  &kp DOT      &trans  &trans  &trans  &trans  &trans  &trans
+                                                     &trans  &trans  &trans       &trans  &trans  &trans
             >;
 
             label = "NUMBER";
