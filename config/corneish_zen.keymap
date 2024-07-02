@@ -53,7 +53,7 @@
 
         combo_function_layer {
             bindings = <&tog 1>;
-            key-positions = <0 24 12>;
+            key-positions = <0 24>;
             timeout-ms = <20>;
         };
 
@@ -251,13 +251,13 @@
 
         combo_bt_clear {
             bindings = <&bt BT_CLR>;
-            key-positions = <6 30 18>;
+            key-positions = <6 30>;
             timeout-ms = <20>;
         };
 
         combo_bt_clear_all {
             bindings = <&bt BT_CLR_ALL>;
-            key-positions = <11 23 35>;
+            key-positions = <11 35>;
             timeout-ms = <20>;
         };
     };
