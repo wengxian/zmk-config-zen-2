@@ -51,6 +51,12 @@
     combos {
         compatible = "zmk,combos";
 
+        combo_function_layer {
+            bindings = <&to 1>;
+            key-positions = <0 24 12>;
+            timeout-ms = <20>;
+        };
+
         combo_delete {
             bindings = <&kp DELETE>;
             key-positions = <1 2>;
@@ -99,6 +105,12 @@
             timeout-ms = <20>;
         };
 
+        combo_insert {
+            bindings = <&kp INSERT>;
+            key-positions = <25 26>;
+            timeout-ms = <20>;
+        };
+
         combo_less_than {
             bindings = <&kp LESS_THAN>;
             key-positions = <26 27>;
@@ -108,6 +120,12 @@
         combo_greater_than {
             bindings = <&kp GREATER_THAN>;
             key-positions = <27 28>;
+            timeout-ms = <20>;
+        };
+
+        combo_caps {
+            bindings = <&kp CAPS>;
+            key-positions = <28 29>;
             timeout-ms = <20>;
         };
 
@@ -183,6 +201,12 @@
             timeout-ms = <20>;
         };
 
+        combo_pause_break {
+            bindings = <&kp PAUSE_BREAK>;
+            key-positions = <10 9>;
+            timeout-ms = <20>;
+        };
+
         combo_enter_r {
             bindings = <&kp ENTER>;
             key-positions = <18 19>;
@@ -201,6 +225,12 @@
             timeout-ms = <20>;
         };
 
+        combo_num_lock {
+            bindings = <&kp KP_NUMLOCK>;
+            key-positions = <30 31>;
+            timeout-ms = <20>;
+        };
+
         combo_left_bracket {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <31 32>;
@@ -210,30 +240,6 @@
         combo_right_bracket {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <32 33>;
-            timeout-ms = <20>;
-        };
-
-        combo_bt_clear_all {
-            bindings = <&bt BT_CLR_ALL>;
-            key-positions = <11 23 35>;
-            timeout-ms = <20>;
-        };
-
-        combo_insert {
-            bindings = <&kp INSERT>;
-            key-positions = <25 26>;
-            timeout-ms = <20>;
-        };
-
-        combo_caps {
-            bindings = <&kp CAPS>;
-            key-positions = <28 29>;
-            timeout-ms = <20>;
-        };
-
-        combo_num_lock {
-            bindings = <&kp KP_NUMLOCK>;
-            key-positions = <30 31>;
             timeout-ms = <20>;
         };
 
@@ -249,15 +255,9 @@
             timeout-ms = <20>;
         };
 
-        combo_function_layer {
-            bindings = <&to 1>;
-            key-positions = <0 24 12>;
-            timeout-ms = <20>;
-        };
-
-        combo_pause_break {
-            bindings = <&kp PAUSE_BREAK>;
-            key-positions = <10 9>;
+        combo_bt_clear_all {
+            bindings = <&bt BT_CLR_ALL>;
+            key-positions = <11 23 35>;
             timeout-ms = <20>;
         };
     };
