@@ -227,7 +227,7 @@
 
         combo_function_layer {
             bindings = <&tog 1>;
-            key-positions = <27 25>;
+            key-positions = <26 28>;
             timeout-ms = <20>;
         };
     };
@@ -299,7 +299,7 @@
 &kp ESCAPE   &kp Q                      &kp W                      &kp E                   &kp R                        &kp T    &kp Y  &kp U                          &kp I                            &kp O                        &kp P                           &kp DEL
 &kp TAB      &home_row_left LEFT_GUI A  &home_row_left LEFT_ALT S  &home_row_left LCTRL D  &home_row_left LEFT_SHIFT F  &kp G    &kp H  &home_row_right RIGHT_SHIFT J  &home_row_right RIGHT_CONTROL K  &home_row_right RIGHT_ALT L  &home_row_right RIGHT_GUI SEMI  &kp SQT
 &shift_caps  &kp Z                      &kp X                      &kp C                   &kp V                        &kp B    &kp N  &kp M                          &kp COMMA                        &kp DOT                      &kp FSLH                        &kp ENTER
-                                                                   &kp LCTRL               &lt 2 SPACE                  &mo 3    &mo 4  &lt 5 BACKSPACE                &mo 6
+                                                                   &mo 1                   &lt 2 SPACE                  &mo 3    &mo 4  &lt 5 BACKSPACE                &mo 6
             >;
         };
 
@@ -316,10 +316,10 @@
 
         navigation_layer {
             bindings = <
-&trans           &kp LC(LEFT)  &kp UP     &kp LC(RIGHT)  &kp HOME   &kp PG_UP    &trans  &trans  &trans  &trans  &trans  &trans
-&kp LA(LC(TAB))  &kp LEFT      &kp DOWN   &kp RIGHT      &kp END    &kp PG_DN    &trans  &trans  &trans  &trans  &trans  &trans
-&trans           &kp LC(Z)     &kp LC(X)  &kp LC(C)      &kp LC(V)  &kp LC(Y)    &trans  &trans  &trans  &trans  &trans  &trans
-                                          &trans         &trans     &trans       &trans  &trans  &trans
+&trans  &kp LC(LEFT)  &kp UP     &kp LC(RIGHT)  &kp HOME   &kp PG_UP    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LEFT      &kp DOWN   &kp RIGHT      &kp END    &kp PG_DN    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LC(Z)     &kp LC(X)  &kp LC(C)      &kp LC(V)  &kp LC(Y)    &trans  &trans  &trans  &trans  &trans  &trans
+                                 &trans         &trans     &trans       &trans  &trans  &trans
             >;
 
             label = "NAVI";
