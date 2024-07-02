@@ -24,7 +24,7 @@
             compatible = "zmk,behavior-caps-word";
             label = "NUM_WORD";
             #binding-cells = <0>;
-            layers = <NUMBER>;
+            layers = <3>;
             continue-list = <BACKSPACE DELETE DOT COMMA>;  // adjust as desired
             ignore-numbers;
         };
