@@ -24,8 +24,7 @@
             compatible = "zmk,behavior-caps-word";
             label = "NUM_WORD";
             #binding-cells = <0>;
-            continue-list = <BACKSPACE DELETE DOT COMMA>;  // adjust as desired
-            ignore-numbers;
+            continue-list = <BACKSPACE DELETE DOT COMMA>;
         };
 
         shift_caps: shift_caps {
