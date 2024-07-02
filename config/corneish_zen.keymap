@@ -52,7 +52,7 @@
         compatible = "zmk,combos";
 
         combo_function_layer {
-            bindings = <&to 1>;
+            bindings = <&tog 1>;
             key-positions = <0 24 12>;
             timeout-ms = <20>;
         };
