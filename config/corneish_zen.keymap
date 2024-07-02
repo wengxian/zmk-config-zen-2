@@ -27,6 +27,15 @@
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
 
+        num_word: num_word {
+            compatible = "zmk,behavior-caps-word";
+            label = "NUM_WORD";
+            layers = <NUMBER>;
+            #binding-cells = <0>;
+            continue-list = <BACKSPACE DELETE DOT COMMA>;  // adjust as desired
+            ignore-numbers;
+        };
+
         home_row_left: home_row_left {
             compatible = "zmk,behavior-hold-tap";
             label = "HOME_ROW_LEFT";
@@ -45,13 +54,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
-        };
-
-        num_word: num_word {
-            compatible = "zmk,behavior-caps-word";
-            label = "NUM_WORD";
-            #binding-cells = <0>;
-            continue-list = <BACKSPACE DELETE DOT COMMA NUMBER_1 NUMBER_2 NUMBER_3 NUMBER_4 NUMBER_5 NUMBER_6 NUMBER_7 NUMBER_8 NUMBER_9 NUMBER_0 PLUS MINUS ASTERISK SLASH EQUAL UNDERSCORE>;
         };
     };
 
