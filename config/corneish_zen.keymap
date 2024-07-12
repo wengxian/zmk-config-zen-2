@@ -51,12 +51,6 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_function_layer {
-            bindings = <&tog 1>;
-            key-positions = <0 24>;
-            timeout-ms = <20>;
-        };
-
         combo_delete {
             bindings = <&kp DELETE>;
             key-positions = <1 2>;
@@ -129,8 +123,8 @@
             timeout-ms = <20>;
         };
 
-        combo_m_ls {
-            bindings = <&macro_ls>;
+        combo_m_gmail {
+            bindings = <&macro_gmail>;
             key-positions = <1 2 3>;
             timeout-ms = <20>;
         };
@@ -141,26 +135,26 @@
             timeout-ms = <20>;
         };
 
-        combo_m_gmail {
-            bindings = <&macro_gmail>;
+        combo_m_addr {
+            bindings = <&macro_addr>;
             key-positions = <4 5 3>;
-            timeout-ms = <20>;
-        };
-
-        combo_m_app_username {
-            bindings = <&macro_app_username>;
-            key-positions = <13 14 15>;
-            timeout-ms = <20>;
-        };
-
-        combo_m_wpwd {
-            bindings = <&macro_wpwd>;
-            key-positions = <14 15 16>;
             timeout-ms = <20>;
         };
 
         combo_m_wpin {
             bindings = <&macro_wpin>;
+            key-positions = <13 14 15>;
+            timeout-ms = <20>;
+        };
+
+        combo_lsft_lctrl_f {
+            bindings = <&kp LS(LC(F))>;
+            key-positions = <14 15 16>;
+            timeout-ms = <20>;
+        };
+
+        combo_m_wpwd {
+            bindings = <&macro_wpwd>;
             key-positions = <15 16 17>;
             timeout-ms = <20>;
         };
@@ -263,13 +257,6 @@
     };
 
     macros {
-        macro_ls: macro_ls {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp L &kp S &kp SPACE &kp MINUS &kp L &kp R &kp T &kp H>;
-            label = "MACRO_LS";
-        };
-
         macro_gmail: macro_gmail {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -277,17 +264,10 @@
             label = "MACRO_GMAIL";
         };
 
-        macro_app_username: macro_app_username {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(D) &kp LS(N) &kp LS(B) &kp LS(L) &kp LS(A) &kp D &kp M &kp I &kp N &kp N0 &kp N2>;
-            label = "MACRO_APP_USERNAME";
-        };
-
         macro_wpwd: macro_wpwd {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(T) &kp N2 &kp N3 &kp N1 &kp N1 &kp N6 &kp N5 &kp N6 &kp LS(H) &kp AT &kp LS(D) &kp N &kp LS(B) &kp AT &kp AT &kp AT>;
+            bindings = <&kp S &kp N9 &kp N0 &kp N7 &kp N1 &kp N8 &kp N6 &kp N6 &kp LS(E) &kp AT &kp LS(D) &kp N &kp LS(B)>;
             label = "MACRO_WPWD";
         };
 
@@ -303,13 +283,6 @@
             #binding-cells = <0>;
             bindings = <&kp N9 &kp N1 &kp SPACE &kp LS(T) &kp A &kp N &kp G &kp L &kp I &kp N &kp SPACE &kp LS(H) &kp A &kp L &kp T &kp SPACE &kp LS(R) &kp O &kp A &kp D>;
             label = "MACRO_ADDR";
-        };
-
-        macro_lrbrac_asterisk: macro_lrbrac_asterisk {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LPAR &kp STAR &kp RPAR>;
-            label = "MACRO_LRBRAC_ASTERISK";
         };
     };
 
@@ -329,7 +302,7 @@
 &kp ESCAPE      &kp Q                      &kp W                      &kp E                   &kp R                        &kp T    &kp Y  &kp U                          &kp I                            &kp O                        &kp P                           &kp DEL
 &kp TAB         &home_row_left LEFT_GUI A  &home_row_left LEFT_ALT S  &home_row_left LCTRL D  &home_row_left LEFT_SHIFT F  &kp G    &kp H  &home_row_right RIGHT_SHIFT J  &home_row_right RIGHT_CONTROL K  &home_row_right RIGHT_ALT L  &home_row_right RIGHT_GUI SEMI  &kp SQT
 &kp LEFT_SHIFT  &kp Z                      &kp X                      &kp C                   &kp V                        &kp B    &kp N  &kp M                          &kp COMMA                        &kp DOT                      &kp FSLH                        &kp ENTER
-                                                                      &kp LEFT_CONTROL        &lt 2 SPACE                  &mo 3    &mo 3  &lt 4 BACKSPACE                &mo 5
+                                                                      &mo 1                   &lt 2 SPACE                  &mo 3    &mo 3  &lt 4 BACKSPACE                &mo 5
             >;
         };
 
