@@ -308,10 +308,10 @@
 
         function_layer {
             bindings = <
-&trans  &kp F12  &kp F7  &kp F8  &kp F9  &trans              &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp F11  &kp F4  &kp F5  &kp F6  &kp LEFT_ALT        &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp F10  &kp F1  &kp F2  &kp F3  &kp LEFT_CONTROL    &trans  &trans  &trans  &trans  &trans  &trans
-                         &trans  &trans  &trans              &trans  &trans  &trans
+&trans          &kp F12  &kp F7  &kp F8  &kp F9  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&sk LCTRL       &kp F11  &kp F4  &kp F5  &kp F6  &kp LEFT_ALT    &trans  &trans  &trans  &trans  &trans  &trans
+&sk LEFT_SHIFT  &kp F10  &kp F1  &kp F2  &kp F3  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                                 &trans  &trans  &trans          &trans  &trans  &trans
             >;
 
             label = "FUNC";
@@ -319,10 +319,10 @@
 
         navigation_layer {
             bindings = <
-&trans  &kp LC(LEFT)  &kp UP    &kp LC(RIGHT)  &kp HOME  &kp PG_UP      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LEFT      &kp DOWN  &kp RIGHT      &kp END   &kp PG_DN      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans        &trans    &trans         &trans    &key_repeat    &trans  &trans  &trans  &trans  &trans  &trans
-                                &trans         &trans    &trans         &trans  &trans  &trans
+&trans          &kp HOME  &kp UP    &kp END    &kp HOME  &kp PG_UP      &trans  &trans  &trans  &trans  &trans  &trans
+&sk LCTRL       &kp LEFT  &kp DOWN  &kp RIGHT  &kp END   &kp PG_DN      &trans  &trans  &trans  &trans  &trans  &trans
+&sk LEFT_SHIFT  &trans    &trans    &trans     &trans    &key_repeat    &trans  &trans  &trans  &trans  &trans  &trans
+                                    &trans     &trans    &trans         &trans  &trans  &trans
             >;
 
             label = "NAVI";
@@ -341,10 +341,10 @@
 
         symbols_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp PLUS   &kp MINUS     &kp AT    &kp CARET   &kp GRAVE  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp EQUAL  &kp UNDER     &kp AMPS  &kp PIPE    &kp COLON  &kp DOUBLE_QUOTES
-&trans  &trans  &trans  &trans  &trans  &trans    &kp EXCL   &kp QUESTION  &kp HASH  &kp DOLLAR  &trans     &trans
-                        &trans  &trans  &trans    &trans     &trans        &trans
+&trans     &kp HOME  &kp UP    &kp END    &kp PG_UP  &trans         &kp PLUS   &kp MINUS     &kp AT    &kp CARET   &kp GRAVE  &trans
+&sk LCTRL  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN  &trans         &kp EQUAL  &kp UNDER     &kp AMPS  &kp PIPE    &kp COLON  &kp DOUBLE_QUOTES
+&sk LSHFT  &trans    &trans    &trans     &trans     &key_repeat    &kp EXCL   &kp QUESTION  &kp HASH  &kp DOLLAR  &trans     &trans
+                               &trans     &trans     &trans         &trans     &trans        &trans
             >;
 
             label = "SYMBOL";
