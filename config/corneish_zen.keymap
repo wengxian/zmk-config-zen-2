@@ -117,12 +117,6 @@
             timeout-ms = <20>;
         };
 
-        combo_esc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <6 7>;
-            timeout-ms = <20>;
-        };
-
         combo_left_brace {
             bindings = <&kp LEFT_BRACE>;
             key-positions = <7 8>;
@@ -207,27 +201,27 @@
             timeout-ms = <20>;
         };
 
-        combo_insert {
-            bindings = <&kp INSERT>;
-            key-positions = <8 6 7>;
-            timeout-ms = <20>;
-        };
-
         combo_lctrl_n {
             bindings = <&kp LC(N)>;
             key-positions = <26 27 28>;
             timeout-ms = <20>;
         };
 
-        combo_capslock {
-            bindings = <&kp CAPSLOCK>;
-            key-positions = <30 31 32>;
+        combo_insert {
+            bindings = <&kp INSERT>;
+            key-positions = <8 6 7>;
             timeout-ms = <20>;
         };
 
         combo_pause_break {
             bindings = <&kp PAUSE_BREAK>;
             key-positions = <8 9 10>;
+            timeout-ms = <20>;
+        };
+
+        combo_capslock {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <30 31 32>;
             timeout-ms = <20>;
         };
 
