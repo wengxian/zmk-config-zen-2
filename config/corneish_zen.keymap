@@ -302,30 +302,8 @@
 &kp ESCAPE      &kp Q                      &kp W                      &kp E                   &kp R                        &kp T    &kp Y  &kp U                          &kp I                            &kp O                        &kp P                           &kp DEL
 &kp TAB         &home_row_left LEFT_GUI A  &home_row_left LEFT_ALT S  &home_row_left LCTRL D  &home_row_left LEFT_SHIFT F  &kp G    &kp H  &home_row_right RIGHT_SHIFT J  &home_row_right RIGHT_CONTROL K  &home_row_right RIGHT_ALT L  &home_row_right RIGHT_GUI SEMI  &kp SQT
 &kp LEFT_SHIFT  &kp Z                      &kp X                      &kp C                   &kp V                        &kp B    &kp N  &kp M                          &kp COMMA                        &kp DOT                      &kp FSLH                        &kp ENTER
-                                                                      &mo 0                   &lt 1 SPACE                  &mo 3    &mo 3  &lt 2 BACKSPACE                &mo 1
+                                                                      &mo 1                   &lt 2 SPACE                  &mo 2    &mo 3  &lt 2 BACKSPACE                &mo 1
             >;
-        };
-
-        settings_layer {
-            bindings = <
-&trans     &kp F12  &kp F7  &kp F8  &kp F9  &trans         &trans  &kp C_PREVIOUS     &kp C_PLAY_PAUSE  &kp C_NEXT       &trans        &out OUT_USB
-&sk LCTRL  &kp F11  &kp F4  &kp F5  &kp F6  &sk LALT       &trans  &bt BT_SEL 0       &bt BT_SEL 1      &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4
-&sk LSHFT  &kp F10  &kp F1  &kp F2  &kp F3  &key_repeat    &trans  &kp C_VOLUME_DOWN  &kp C_MUTE        &kp C_VOLUME_UP  &trans        &out OUT_BLE
-                            &trans  &trans  &trans         &trans  &trans             &trans
-            >;
-
-            label = "SETTING";
-        };
-
-        symbols_layer {
-            bindings = <
-&trans     &kp HOME  &kp UP    &kp END    &kp PG_UP  &trans         &kp PLUS   &kp MINUS     &kp AT    &kp CARET   &kp GRAVE  &trans
-&sk LCTRL  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN  &trans         &kp EQUAL  &kp UNDER     &kp AMPS  &kp PIPE    &kp COLON  &kp DOUBLE_QUOTES
-&sk LSHFT  &trans    &trans    &trans     &trans     &key_repeat    &kp EXCL   &kp QUESTION  &kp HASH  &kp DOLLAR  &trans     &trans
-                               &trans     &trans     &trans         &trans     &trans        &trans
-            >;
-
-            label = "SYMBOL";
         };
 
         number_layer {
@@ -337,6 +315,28 @@
             >;
 
             label = "NUMBER";
+        };
+
+        navi_symbols_layer {
+            bindings = <
+&trans     &kp HOME  &kp UP    &kp END    &kp PG_UP  &trans         &kp PLUS   &kp MINUS     &kp AT    &kp CARET   &kp GRAVE  &trans
+&sk LCTRL  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN  &sk LALT       &kp EQUAL  &kp UNDER     &kp AMPS  &kp PIPE    &kp COLON  &kp DOUBLE_QUOTES
+&sk LSHFT  &trans    &trans    &trans     &trans     &key_repeat    &kp EXCL   &kp QUESTION  &kp HASH  &kp DOLLAR  &trans     &trans
+                               &trans     &trans     &trans         &trans     &trans        &trans
+            >;
+
+            label = "SYMBOL";
+        };
+
+        fkey_settings_layer {
+            bindings = <
+&trans     &kp F12  &kp F7  &kp F8  &kp F9  &trans         &bt BT_SEL 0  &bt BT_SEL 1       &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4  &out OUT_BLE
+&sk LCTRL  &kp F11  &kp F4  &kp F5  &kp F6  &sk LALT       &trans        &kp C_VOLUME_DOWN  &kp C_MUTE        &kp C_VOL_UP  &trans        &trans
+&sk LSHFT  &kp F10  &kp F1  &kp F2  &kp F3  &key_repeat    &trans        &kp C_PREV         &kp C_PLAY_PAUSE  &kp C_NEXT    &trans        &out OUT_USB
+                            &trans  &trans  &trans         &trans        &trans             &trans
+            >;
+
+            label = "SETTING";
         };
     };
 };
