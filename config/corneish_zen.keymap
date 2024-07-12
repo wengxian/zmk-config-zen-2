@@ -99,8 +99,8 @@
             timeout-ms = <20>;
         };
 
-        combo_insert {
-            bindings = <&kp INSERT>;
+        combo_redo {
+            bindings = <&kp LC(Y)>;
             key-positions = <25 26>;
             timeout-ms = <20>;
         };
@@ -117,8 +117,8 @@
             timeout-ms = <20>;
         };
 
-        combo_caps {
-            bindings = <&kp CAPS>;
+        combo_lctrl_h {
+            bindings = <&kp LC(H)>;
             key-positions = <28 29>;
             timeout-ms = <20>;
         };
@@ -159,8 +159,8 @@
             timeout-ms = <20>;
         };
 
-        combo_m_addr {
-            bindings = <&macro_addr>;
+        combo_insert {
+            bindings = <&kp INSERT>;
             key-positions = <25 26 27>;
             timeout-ms = <20>;
         };
@@ -171,8 +171,8 @@
             timeout-ms = <20>;
         };
 
-        combo_m_lrbrack_asterisk {
-            bindings = <&macro_lrbrac_asterisk>;
+        combo_capslock {
+            bindings = <&kp CAPSLOCK>;
             key-positions = <28 29 27>;
             timeout-ms = <20>;
         };
@@ -197,7 +197,7 @@
 
         combo_pause_break {
             bindings = <&kp PAUSE_BREAK>;
-            key-positions = <10 9>;
+            key-positions = <31 32 33>;
             timeout-ms = <20>;
         };
 
@@ -221,7 +221,7 @@
 
         combo_num_lock {
             bindings = <&kp KP_NUMLOCK>;
-            key-positions = <30 31>;
+            key-positions = <30 31 32>;
             timeout-ms = <20>;
         };
 
@@ -239,7 +239,7 @@
 
         combo_scroll_lock {
             bindings = <&kp SCROLLLOCK>;
-            key-positions = <34 33>;
+            key-positions = <34 33 32>;
             timeout-ms = <20>;
         };
 
