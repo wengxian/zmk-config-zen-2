@@ -153,8 +153,8 @@
             timeout-ms = <20>;
         };
 
-        combo_m_gmail {
-            bindings = <&macro_gmail>;
+        combo_m_addr {
+            bindings = <&macro_addr>;
             key-positions = <1 2 3>;
             timeout-ms = <20>;
         };
@@ -165,8 +165,8 @@
             timeout-ms = <20>;
         };
 
-        combo_m_addr {
-            bindings = <&macro_addr>;
+        combo_m_gmail {
+            bindings = <&macro_gmail>;
             key-positions = <4 5 3>;
             timeout-ms = <20>;
         };
@@ -236,22 +236,22 @@
             key-positions = <11 35>;
             timeout-ms = <20>;
         };
-
     };
 
     macros {
+
+        macro_addr: macro_addr {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N9 &kp N1 &kp SPACE &kp LS(T) &kp A &kp N &kp G &kp L &kp I &kp N &kp SPACE &kp LS(H) &kp A &kp L &kp T &kp SPACE &kp LS(R) &kp O &kp A &kp D>;
+            label = "MACRO_ADDR";
+        };
+
         macro_gmail: macro_gmail {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp W &kp E &kp N &kp G &kp X &kp I &kp A &kp N &kp N6 &kp N4 &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
             label = "MACRO_GMAIL";
-        };
-
-        macro_wpwd: macro_wpwd {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp S &kp N9 &kp N0 &kp N7 &kp N1 &kp N8 &kp N6 &kp N6 &kp LS(E) &kp AT &kp LS(D) &kp N &kp LS(B)>;
-            label = "MACRO_WPWD";
         };
 
         macro_wpin: macro_wpin {
@@ -261,11 +261,11 @@
             label = "MACRO_WPIN";
         };
 
-        macro_addr: macro_addr {
+        macro_wpwd: macro_wpwd {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp N9 &kp N1 &kp SPACE &kp LS(T) &kp A &kp N &kp G &kp L &kp I &kp N &kp SPACE &kp LS(H) &kp A &kp L &kp T &kp SPACE &kp LS(R) &kp O &kp A &kp D>;
-            label = "MACRO_ADDR";
+            bindings = <&kp S &kp N9 &kp N0 &kp N7 &kp N1 &kp N8 &kp N6 &kp N6 &kp LS(E) &kp AT &kp LS(D) &kp N &kp LS(B)>;
+            label = "MACRO_WPWD";
         };
     };
 
