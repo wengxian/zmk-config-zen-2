@@ -224,6 +224,19 @@
             key-positions = <32 33 34>;
             timeout-ms = <20>;
         };
+
+        combo_bt_clear {
+            bindings = <&bt BT_CLR>;
+            key-positions = <6 30>;
+            timeout-ms = <20>;
+        };
+
+        combo_bt_clear_all {
+            bindings = <&bt BT_CLR_ALL>;
+            key-positions = <11 35>;
+            timeout-ms = <20>;
+        };
+
     };
 
     macros {
@@ -253,18 +266,6 @@
             #binding-cells = <0>;
             bindings = <&kp N9 &kp N1 &kp SPACE &kp LS(T) &kp A &kp N &kp G &kp L &kp I &kp N &kp SPACE &kp LS(H) &kp A &kp L &kp T &kp SPACE &kp LS(R) &kp O &kp A &kp D>;
             label = "MACRO_ADDR";
-        };
-
-        combo_bt_clear {
-            bindings = <&bt BT_CLR>;
-            key-positions = <6 30>;
-            timeout-ms = <20>;
-        };
-
-        combo_bt_clear_all {
-            bindings = <&bt BT_CLR_ALL>;
-            key-positions = <11 35>;
-            timeout-ms = <20>;
         };
     };
 
