@@ -183,27 +183,27 @@
             timeout-ms = <20>;
         };
 
-        combo_m_wpin {
-            bindings = <&macro_wpin>;
-            key-positions = <25 26 27>;
-            timeout-ms = <20>;
-        };
-
         combo_lsft_lctrl_f {
             bindings = <&kp LS(LC(F))>;
             key-positions = <14 15 16>;
             timeout-ms = <20>;
         };
 
-        combo_m_wpwd {
-            bindings = <&macro_wpwd>;
-            key-positions = <27 28 29>;
+        combo_m_wpin {
+            bindings = <&macro_wpin>;
+            key-positions = <25 26 27>;
             timeout-ms = <20>;
         };
 
         combo_lctrl_n {
             bindings = <&kp LC(N)>;
             key-positions = <26 27 28>;
+            timeout-ms = <20>;
+        };
+
+        combo_m_wpwd {
+            bindings = <&macro_wpwd>;
+            key-positions = <27 28 29>;
             timeout-ms = <20>;
         };
 
@@ -219,6 +219,12 @@
             timeout-ms = <20>;
         };
 
+        combo_scroll_lock {
+            bindings = <&kp SCROLLLOCK>;
+            key-positions = <19 20 21>;
+            timeout-ms = <20>;
+        };
+
         combo_capslock {
             bindings = <&kp CAPSLOCK>;
             key-positions = <30 31 32>;
@@ -228,12 +234,6 @@
         combo_num_lock {
             bindings = <&kp KP_NUMLOCK>;
             key-positions = <32 33 34>;
-            timeout-ms = <20>;
-        };
-
-        combo_scroll_lock {
-            bindings = <&kp SCROLLLOCK>;
-            key-positions = <19 20 21>;
             timeout-ms = <20>;
         };
     };
