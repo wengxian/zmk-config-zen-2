@@ -263,7 +263,7 @@
         macro_wpwd: macro_wpwd {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp S &kp N9 &kp N0 &kp N7 &kp N1 &kp N8 &kp N6 &kp N6 &kp LS(E) &kp AT &kp LS(D) &kp N &kp LS(B)>;
+            bindings = <&kp T &kp N2 &kp N3 &kp N1 &kp N1 &kp N6 &kp N5 &kp N6 &kp H &kp AT &kp D &kp N &kp LS(B)>;
             label = "MACRO_WPWD";
         };
     };
