@@ -103,7 +103,7 @@
 &kp ESC     &kp Q        &kp W        &kp E         &kp R          &kp T        &kp Y        &kp U         &kp I         &kp O        &kp P           &kp GRAVE
 &kp BSPC    &hrm LGUI A  &hrm LALT S  &hrm LCTRL D  &hrm LSHFT F   &kp G        &kp H        &hrm RSHFT J  &hrm RCTRL K  &hrm RALT L  &hrm RGUI SEMI  &kp APOS
 &kp LSHFT   &kp Z        &kp X        &kp C         &kp V          &kp B        &kp N        &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp ENTER
-                                      &ltkp 2 TAB   &ltkp 4 SPACE  &ltkp 5 DEL  &ltkp 6 DEL  &ltkp 7 BSPC  &ltkp 8 TAB
+                                      &ltkp 2 TAB   &ltkp 4 SPACE  &ltkp 5 DEL  &ltkp 6 DEL  &ltkp 7 BSPC  &ltkp 9 TAB
             >;
             display-name = "MBASE";
         };
