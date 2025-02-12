@@ -46,13 +46,6 @@
         flavor = "tap-preferred";
     };
 
-    scroll_encoder: scroll_encoder {
-        compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <0>;
-        bindings = <&kp C_VOLUME_UP>, <&kp C_VOLUME_DOWN>;
-        tap-ms = <30>;
-    };
-
     combos {
         compatible = "zmk,combos";
 
@@ -97,7 +90,6 @@
             >;
 
             display-name = "QWERTY";
-            sensor-bindings = <&scroll_encoder>;
         };
 
         number_layer {
@@ -109,7 +101,6 @@
             >;
 
             display-name = "NUMBER";
-            sensor-bindings = <&scroll_encoder>;
         };
 
         navi_layer {
@@ -121,7 +112,6 @@
             >;
 
             display-name = "NAVI";
-            sensor-bindings = <&scroll_encoder>;
         };
 
         fkeys_layer {
@@ -133,7 +123,6 @@
             >;
 
             display-name = "FKEYS";
-            sensor-bindings = <&scroll_encoder>;
         };
 
         settings_layer {
@@ -145,7 +134,6 @@
             >;
 
             display-name = "SETTING";
-            sensor-bindings = <&scroll_encoder>;
         };
 
         sym_layer {
@@ -157,7 +145,6 @@
             >;
 
             display-name = "SYMBOL";
-            sensor-bindings = <&scroll_encoder>;
         };
 
         mouse_layer {
@@ -169,7 +156,6 @@
             >;
 
             display-name = "MOUSE";
-            sensor-bindings = <&scroll_encoder>;
         };
     };
 };
