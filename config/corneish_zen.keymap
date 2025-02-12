@@ -175,7 +175,7 @@
 &trans  &kp LC(Z)  &kp LC(X)       &kp LC(C)       &kp LC(V)        &kp LC(Y)       &trans  &mkp LCLK       &mkp MCLK       &mkp RCLK        &trans  &trans
                                    &mkp MCLK       &mkp LCLK        &mkp RCLK       &trans  &trans          &trans
             >;
-            display-name = "WMOUSE";
+            display-name = "WMSE";
         };
 
         mac_mouse_layer {
@@ -185,7 +185,7 @@
 &trans  &kp LG(Z)  &kp LG(X)       &kp LG(C)       &kp LG(V)        &kp LG(LS(Z))   &trans  &mkp LCLK       &mkp MCLK       &mkp RCLK        &trans  &trans
                                    &mkp MCLK       &mkp LCLK        &mkp RCLK       &trans  &trans          &trans
             >;
-            display-name = "MMOUSE";
+            display-name = "MMSE";
         }; 
     };
 };
