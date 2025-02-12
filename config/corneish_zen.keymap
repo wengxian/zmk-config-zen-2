@@ -95,7 +95,6 @@
 &kp LSHFT   &kp Z        &kp X        &kp C         &kp V          &kp B        &kp N        &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp ENTER
                                       &ltkp 2 TAB   &ltkp 3 SPACE  &ltkp 5 DEL  &ltkp 6 DEL  &ltkp 7 BSPC  &ltkp 8 TAB
             >;
-
             display-name = "WBASE";
         };
 
@@ -106,7 +105,6 @@
 &kp LSHFT   &kp Z        &kp X        &kp C         &kp V          &kp B        &kp N        &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp ENTER
                                       &ltkp 2 TAB   &ltkp 4 SPACE  &ltkp 5 DEL  &ltkp 6 DEL  &ltkp 7 BSPC  &ltkp 8 TAB
             >;
-
             display-name = "MBASE";
         };
 
@@ -117,7 +115,6 @@
 &trans  &kp SLASH        &kp N1        &kp N2         &kp N3         &kp EQUAL  &trans      &kp KP_N1         &kp KP_N2         &kp KP_N3        &kp DOT          &trans
                                        &trans         &trans         &trans     &trans      &trans            &trans
             >;
-
             display-name = "NUMBER";
         };
 
@@ -126,9 +123,8 @@
 &trans  &kp INS    &kp HOME   &kp UP     &kp END    &kp PG_UP  &trans  &trans      &trans     &trans    &trans    &trans
 &trans  &kp LC(A)  &kp LEFT   &kp DOWN   &kp RIGHT  &kp PG_DN  &trans  &kp RSHIFT  &kp RCTRL  &kp RALT  &kp RGUI  &trans
 &trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)  &trans  &trans      &trans     &trans    &trans    &trans
-                              &trans     &trans      &trans    &trans  &trans      &trans
+                              &trans     &trans     &trans     &trans  &trans      &trans
             >;
-
             display-name = "WNAVI";
         };
 
@@ -137,9 +133,8 @@
 &trans  &kp INS    &kp HOME   &kp UP     &kp END    &kp PG_UP      &trans  &trans      &trans     &trans    &trans    &trans
 &trans  &kp LG(A)  &kp LEFT   &kp DOWN   &kp RIGHT  &kp PG_DN      &trans  &kp RSHIFT  &kp RCTRL  &kp RALT  &kp RGUI  &trans
 &trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(LS(Z))  &trans  &trans      &trans     &trans    &trans    &trans
-                              &trans     &trans      &trans        &trans  &trans      &trans
+                              &trans     &trans     &trans         &trans  &trans      &trans
             >;
-
             display-name = "MNAVI";
         };
 
@@ -150,7 +145,6 @@
 &trans  &kp F10  &kp F1  &kp F2  &kp F3  &kp PAUSE_BREAK  &trans    &trans      &trans     &trans    &trans    &trans
                          &trans  &trans  &trans           &trans    &trans      &trans
             >;
-
             display-name = "FKEYS";
         };
 
@@ -161,7 +155,6 @@
 &kp C_PWR     &kp C_BRI_DN   &kp C_VOLUME_DOWN  &kp C_MUTE        &kp C_VOLUME_UP  &trans        &trans        &kp C_VOLUME_DOWN  &kp C_MUTE        &kp C_VOLUME_UP  &kp C_BRI_DN   &kp C_PWR
                                                 &trans            &trans           &trans        &trans        &trans             &trans
             >;
-
             display-name = "SETTING";
         };
 
@@ -172,19 +165,27 @@
 &trans  &trans  &kp EXCL  &kp AT     &kp HASH   &kp BSLH  &kp EXCL   &kp QMARK  &kp LT    &kp GT    &trans     &trans
                           &trans     &trans     &trans    &trans     &trans     &trans
             >;
-
             display-name = "SYMBOL";
         };
 
-        mouse_layer {
+        win_mouse_layer {
             bindings = <
 &trans  &kp INS    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP    &trans  &trans          &msc SCRL_UP    &trans           &trans  &trans
 &trans  &kp LC(A)  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans  &trans
 &trans  &kp LC(Z)  &kp LC(X)       &kp LC(C)       &kp LC(V)        &kp LC(Y)       &trans  &mkp LCLK       &mkp MCLK       &mkp RCLK        &trans  &trans
                                    &mkp MCLK       &mkp LCLK        &mkp RCLK       &trans  &trans          &trans
             >;
-
-            display-name = "MOUSE";
+            display-name = "WMOUSE";
         };
+
+        mac_mouse_layer {
+            bindings = <
+&trans  &kp INS    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP    &trans  &trans          &msc SCRL_UP    &trans           &trans  &trans
+&trans  &kp LG(A)  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans  &trans
+&trans  &kp LG(Z)  &kp LG(X)       &kp LG(C)       &kp LG(V)        &kp LG(LS(Z))   &trans  &mkp LCLK       &mkp MCLK       &mkp RCLK        &trans  &trans
+                                   &mkp MCLK       &mkp LCLK        &mkp RCLK       &trans  &trans          &trans
+            >;
+            display-name = "MMOUSE";
+        }; 
     };
 };
