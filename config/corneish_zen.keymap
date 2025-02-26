@@ -8,7 +8,6 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
-#include <zephyr/dt-bindings/input/input-event-codes.h>
 
 #define COMBO_DEFAULT_TIMEOUT_MS 15
 #define COMBO_QUICK_TIMEOUT_MS 10
@@ -56,24 +55,17 @@
             require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
         };
 
-        combo_bt_clear {
-            bindings = <&bt BT_CLR>;
-            key-positions = <6 30>;
-            timeout-ms = <COMBO_DEFAULT_TIMEOUT_MS>;
+        combo_lgui_a {
+            bindings = <&kp LG(A)>;
+            key-positions = <13 14>;
+            timeout-ms = <COMBO_QUICK_TIMEOUT_MS>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
         };
 
-        combo_bootloader {
-            bindings = <&bootloader>;
-            key-positions = <8 32>;
-            timeout-ms = <COMBO_DEFAULT_TIMEOUT_MS>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
-        };
-
-        combo_bt_clear_all {
-            bindings = <&bt BT_CLR_ALL>;
-            key-positions = <11 35>;
-            timeout-ms = <COMBO_DEFAULT_TIMEOUT_MS>;
+        combo_backspace {
+            bindings = <&kp BSPC>;
+            key-positions = <14 15>;
+            timeout-ms = <COMBO_QUICK_TIMEOUT_MS>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
         };
 
@@ -83,29 +75,86 @@
             timeout-ms = <COMBO_DEFAULT_TIMEOUT_MS>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
         };
+
+        combo_disc_bt_0 {
+            bindings = <&bt BT_DISC 0>;
+            key-positions = <6 30>;
+            timeout-ms = <COMBO_QUICK_TIMEOUT_MS>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
+        };
+
+        combo_disc_bt_1 {
+            bindings = <&bt BT_DISC 1>;
+            key-positions = <7 31>;
+            timeout-ms = <COMBO_QUICK_TIMEOUT_MS>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
+        };
+
+        combo_disc_bt_2 {
+            bindings = <&bt BT_DISC 2>;
+            key-positions = <8 32>;
+            timeout-ms = <COMBO_QUICK_TIMEOUT_MS>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
+        };
+
+        combo_disc_bt_3 {
+            bindings = <&bt BT_DISC 3>;
+            key-positions = <9 33>;
+            timeout-ms = <COMBO_QUICK_TIMEOUT_MS>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
+        };
+
+        combo_disc_bt_4 {
+            bindings = <&bt BT_DISC 4>;
+            key-positions = <10 34>;
+            timeout-ms = <COMBO_QUICK_TIMEOUT_MS>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
+        };
+
+        combo_bt_clear {
+            bindings = <&bt BT_CLR>;
+            key-positions = <11 35>;
+            timeout-ms = <COMBO_QUICK_TIMEOUT_MS>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
+        };
+
+        combo_bt_clear_all {
+            bindings = <&bt BT_CLR_ALL>;
+            key-positions = <11 23 35>;
+            timeout-ms = <COMBO_QUICK_TIMEOUT_MS>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
+        };
+
+        combo_bootloader {
+            bindings = <&bootloader>;
+            key-positions = <39 40 41>;
+            timeout-ms = <COMBO_QUICK_TIMEOUT_MS>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
+        };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        win_layer {
+        base_win_layer {
             bindings = <
 &kp ESC     &kp Q        &kp W        &kp E         &kp R          &kp T        &kp Y        &kp U         &kp I         &kp O        &kp P           &kp GRAVE
 &kp BSPC    &hrm LGUI A  &hrm LALT S  &hrm LCTRL D  &hrm LSHFT F   &kp G        &kp H        &hrm RSHFT J  &hrm RCTRL K  &hrm RALT L  &hrm RGUI SEMI  &kp APOS
 &kp LSHFT   &kp Z        &kp X        &kp C         &kp V          &kp B        &kp N        &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp ENTER
-                                      &ltkp 2 TAB   &ltkp 3 SPACE  &ltkp 5 DEL  &ltkp 6 DEL  &ltkp 7 BSPC  &ltkp 8 TAB
+                                      &ltkp 2 TAB   &ltkp 3 SPACE  &ltkp 4 DEL  &ltkp 5 DEL  &ltkp 6 BSPC  &ltkp 7 CAPS
             >;
             display-name = "WBASE";
         };
 
-        mac_layer {
+        base_mac_layer {
             bindings = <
-&kp ESC     &kp Q        &kp W        &kp E         &kp R          &kp T        &kp Y        &kp U         &kp I         &kp O        &kp P           &kp GRAVE
-&kp BSPC    &hrm LGUI A  &hrm LALT S  &hrm LCTRL D  &hrm LSHFT F   &kp G        &kp H        &hrm RSHFT J  &hrm RCTRL K  &hrm RALT L  &hrm RGUI SEMI  &kp APOS
-&kp LSHFT   &kp Z        &kp X        &kp C         &kp V          &kp B        &kp N        &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp ENTER
-                                      &ltkp 2 TAB   &ltkp 4 SPACE  &ltkp 5 DEL  &ltkp 6 DEL  &ltkp 7 BSPC  &ltkp 9 TAB
+&trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp LGUI  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                          &trans  &trans  &trans  &trans  &trans  &trans
             >;
             display-name = "MBASE";
+            sensor-bindings = <&scroll_encoder>;
         };
 
         number_layer {
@@ -118,32 +167,22 @@
             display-name = "NUMBER";
         };
 
-        win_navi_layer {
+        navi_layer {
             bindings = <
-&trans  &kp INS    &kp HOME   &kp UP     &kp END    &kp PG_UP  &trans  &kp N7         &kp N8         &kp N9        &kp N0           &trans
-&trans  &kp LC(A)  &kp LEFT   &kp DOWN   &kp RIGHT  &kp PG_DN  &trans  &hrm RSHFT N4  &hrm RCTRL N5  &hrm RALT N6  &hrm RGUI COMMA  &trans
-&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)  &trans  &kp N1         &kp N2         &kp N3        &kp DOT          &trans
-                              &trans     &trans     &trans     &trans  &trans         &trans
+&trans  &kp INS  &kp HOME  &kp UP    &kp END    &kp PG_UP  &kp EQUAL  &kp N7         &kp N8         &kp N9        &kp N0           &trans
+&trans  &trans   &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN  &kp COMMA  &hrm RSHFT N4  &hrm RCTRL N5  &hrm RALT N6  &hrm RGUI ASTRK  &trans
+&trans  &trans   &trans    &trans    &trans     &trans     &kp DOT    &kp N1         &kp N2         &kp N3        &trans           &trans
+                           &trans    &trans     &trans     &trans     &trans         &trans
             >;
-            display-name = "WNAVI";
-        };
-
-        mac_navi_layer {
-            bindings = <
-&trans  &kp INS    &kp HOME   &kp UP     &kp END    &kp PG_UP      &trans  &kp N7         &kp N8         &kp N9        &kp N0           &trans
-&trans  &kp LG(A)  &kp LEFT   &kp DOWN   &kp RIGHT  &kp PG_DN      &trans  &hrm RSHFT N4  &hrm RCTRL N5  &hrm RALT N6  &hrm RGUI COMMA  &trans
-&trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(LS(Z))  &trans  &kp N1         &kp N2         &kp N3        &kp DOT          &trans
-                              &trans     &trans     &trans         &trans  &trans         &trans
-            >;
-            display-name = "MNAVI";
+            display-name = "NAVI";
         };
 
         fkeys_layer {
             bindings = <
-&trans  &kp F12  &kp F7  &kp F8  &kp F9  &kp PSCRN        &trans    &trans      &trans     &trans    &trans    &trans
-&trans  &kp F11  &kp F4  &kp F5  &kp F6  &kp SLCK         &kp CAPS  &kp RSHIFT  &kp RCTRL  &kp RALT  &kp RGUI  &trans
-&trans  &kp F10  &kp F1  &kp F2  &kp F3  &kp PAUSE_BREAK  &trans    &trans      &trans     &trans    &trans    &trans
-                         &trans  &trans  &trans           &trans    &trans      &trans
+&trans  &kp F12  &kp F7  &kp F8  &kp F9  &kp PSCRN        &trans  &trans      &trans     &trans    &trans    &trans
+&trans  &kp F11  &kp F4  &kp F5  &kp F6  &kp SLCK         &trans  &kp RSHIFT  &kp RCTRL  &kp RALT  &kp RGUI  &trans
+&trans  &kp F10  &kp F1  &kp F2  &kp F3  &kp PAUSE_BREAK  &trans  &trans      &trans     &trans    &trans    &trans
+                         &trans  &trans  &trans           &trans  &trans      &trans
             >;
             display-name = "FKEYS";
         };
@@ -168,24 +207,14 @@
             display-name = "SYMBOL";
         };
 
-        win_mouse_layer {
+        mouse_layer {
             bindings = <
-&trans  &kp INS    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP    &trans  &trans          &msc SCRL_UP    &trans           &trans  &trans
-&trans  &kp LC(A)  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans  &trans
-&trans  &kp LC(Z)  &kp LC(X)       &kp LC(C)       &kp LC(V)        &kp LC(Y)       &trans  &mkp LCLK       &mkp MCLK       &mkp RCLK        &trans  &trans
-                                   &mkp MCLK       &mkp LCLK        &mkp RCLK       &trans  &trans          &trans
+&trans  &trans  &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP    &trans  &trans          &msc SCRL_UP    &trans           &trans  &trans
+&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans  &trans
+&trans  &trans  &trans          &trans          &trans           &trans          &trans  &mkp LCLK       &mkp MCLK       &mkp RCLK        &trans  &trans
+                                &mkp MCLK       &mkp LCLK        &mkp RCLK       &trans  &trans          &trans
             >;
-            display-name = "WMSE";
+            display-name = "MOUSE";
         };
-
-        mac_mouse_layer {
-            bindings = <
-&trans  &kp INS    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP    &trans  &trans          &msc SCRL_UP    &trans           &trans  &trans
-&trans  &kp LG(A)  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans  &trans
-&trans  &kp LG(Z)  &kp LG(X)       &kp LG(C)       &kp LG(V)        &kp LG(LS(Z))   &trans  &mkp LCLK       &mkp MCLK       &mkp RCLK        &trans  &trans
-                                   &mkp MCLK       &mkp LCLK        &mkp RCLK       &trans  &trans          &trans
-            >;
-            display-name = "MMSE";
-        }; 
     };
 };
