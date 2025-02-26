@@ -58,14 +58,14 @@
         combo_lgui_a {
             bindings = <&kp LG(A)>;
             key-positions = <13 14>;
-            timeout-ms = <COMBO_QUICK_TIMEOUT_MS>;
+            timeout-ms = <COMBO_DEFAULT_TIMEOUT_MS>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
         };
 
         combo_backspace {
             bindings = <&kp BSPC>;
             key-positions = <14 15>;
-            timeout-ms = <COMBO_QUICK_TIMEOUT_MS>;
+            timeout-ms = <COMBO_DEFAULT_TIMEOUT_MS>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
         };
 
@@ -79,56 +79,56 @@
         combo_disc_bt_0 {
             bindings = <&bt BT_DISC 0>;
             key-positions = <6 30>;
-            timeout-ms = <COMBO_QUICK_TIMEOUT_MS>;
+            timeout-ms = <COMBO_DEFAULT_TIMEOUT_MS>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
         };
 
         combo_disc_bt_1 {
             bindings = <&bt BT_DISC 1>;
             key-positions = <7 31>;
-            timeout-ms = <COMBO_QUICK_TIMEOUT_MS>;
+            timeout-ms = <COMBO_DEFAULT_TIMEOUT_MS>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
         };
 
         combo_disc_bt_2 {
             bindings = <&bt BT_DISC 2>;
             key-positions = <8 32>;
-            timeout-ms = <COMBO_QUICK_TIMEOUT_MS>;
+            timeout-ms = <COMBO_DEFAULT_TIMEOUT_MS>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
         };
 
         combo_disc_bt_3 {
             bindings = <&bt BT_DISC 3>;
             key-positions = <9 33>;
-            timeout-ms = <COMBO_QUICK_TIMEOUT_MS>;
+            timeout-ms = <COMBO_DEFAULT_TIMEOUT_MS>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
         };
 
         combo_disc_bt_4 {
             bindings = <&bt BT_DISC 4>;
             key-positions = <10 34>;
-            timeout-ms = <COMBO_QUICK_TIMEOUT_MS>;
+            timeout-ms = <COMBO_DEFAULT_TIMEOUT_MS>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
         };
 
         combo_bt_clear {
             bindings = <&bt BT_CLR>;
             key-positions = <11 35>;
-            timeout-ms = <COMBO_QUICK_TIMEOUT_MS>;
+            timeout-ms = <COMBO_DEFAULT_TIMEOUT_MS>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
         };
 
         combo_bt_clear_all {
             bindings = <&bt BT_CLR_ALL>;
             key-positions = <11 23 35>;
-            timeout-ms = <COMBO_QUICK_TIMEOUT_MS>;
+            timeout-ms = <COMBO_DEFAULT_TIMEOUT_MS>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
         };
 
         combo_bootloader {
             bindings = <&bootloader>;
             key-positions = <39 40 41>;
-            timeout-ms = <COMBO_QUICK_TIMEOUT_MS>;
+            timeout-ms = <COMBO_DEFAULT_TIMEOUT_MS>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
         };
     };
@@ -154,6 +154,7 @@
                           &trans  &trans  &trans  &trans  &trans  &trans
             >;
             display-name = "MBASE";
+            sensor-bindings = <&scroll_encoder>;
         };
 
         number_layer {
