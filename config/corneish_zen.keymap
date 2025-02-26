@@ -26,7 +26,6 @@
 };
 
 / {
-
     ltkp: ltkp {
         compatible = "zmk,behavior-hold-tap";
         #binding-cells = <2>;
@@ -48,87 +47,31 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_os_switch {
-            bindings = <&tog 1>;
-            key-positions = <0 24>;
-            timeout-ms = <COMBO_DEFAULT_TIMEOUT_MS>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
-        };
-
         combo_lgui_a {
             bindings = <&kp LG(A)>;
-            key-positions = <13 14>;
-            timeout-ms = <COMBO_DEFAULT_TIMEOUT_MS>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
-        };
-
-        combo_backspace {
-            bindings = <&kp BSPC>;
             key-positions = <14 15>;
-            timeout-ms = <COMBO_DEFAULT_TIMEOUT_MS>;
+            timeout-ms = <COMBO_QUICK_TIMEOUT_MS>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
         };
 
         combo_enter {
             bindings = <&kp ENTER>;
             key-positions = <15 16>;
-            timeout-ms = <COMBO_DEFAULT_TIMEOUT_MS>;
+            timeout-ms = <COMBO_QUICK_TIMEOUT_MS>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
         };
 
-        combo_disc_bt_0 {
-            bindings = <&bt BT_DISC 0>;
-            key-positions = <6 30>;
-            timeout-ms = <COMBO_DEFAULT_TIMEOUT_MS>;
+        combo_less_than {
+            bindings = <&kp LT>;
+            key-positions = <26 27>;
+            timeout-ms = <COMBO_QUICK_TIMEOUT_MS>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
         };
 
-        combo_disc_bt_1 {
-            bindings = <&bt BT_DISC 1>;
-            key-positions = <7 31>;
-            timeout-ms = <COMBO_DEFAULT_TIMEOUT_MS>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
-        };
-
-        combo_disc_bt_2 {
-            bindings = <&bt BT_DISC 2>;
-            key-positions = <8 32>;
-            timeout-ms = <COMBO_DEFAULT_TIMEOUT_MS>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
-        };
-
-        combo_disc_bt_3 {
-            bindings = <&bt BT_DISC 3>;
-            key-positions = <9 33>;
-            timeout-ms = <COMBO_DEFAULT_TIMEOUT_MS>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
-        };
-
-        combo_disc_bt_4 {
-            bindings = <&bt BT_DISC 4>;
-            key-positions = <10 34>;
-            timeout-ms = <COMBO_DEFAULT_TIMEOUT_MS>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
-        };
-
-        combo_bt_clear {
-            bindings = <&bt BT_CLR>;
-            key-positions = <11 35>;
-            timeout-ms = <COMBO_DEFAULT_TIMEOUT_MS>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
-        };
-
-        combo_bt_clear_all {
-            bindings = <&bt BT_CLR_ALL>;
-            key-positions = <11 23 35>;
-            timeout-ms = <COMBO_DEFAULT_TIMEOUT_MS>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
-        };
-
-        combo_bootloader {
-            bindings = <&bootloader>;
-            key-positions = <39 40 41>;
-            timeout-ms = <COMBO_DEFAULT_TIMEOUT_MS>;
+        combo_greater_than {
+            bindings = <&kp GT>;
+            key-positions = <27 28>;
+            timeout-ms = <COMBO_QUICK_TIMEOUT_MS>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
         };
     };
@@ -136,24 +79,14 @@
     keymap {
         compatible = "zmk,keymap";
 
-        base_win_layer {
+        base_layer {
             bindings = <
 &kp ESC     &kp Q        &kp W        &kp E         &kp R          &kp T        &kp Y        &kp U         &kp I         &kp O        &kp P           &kp GRAVE
 &kp BSPC    &hrm LGUI A  &hrm LALT S  &hrm LCTRL D  &hrm LSHFT F   &kp G        &kp H        &hrm RSHFT J  &hrm RCTRL K  &hrm RALT L  &hrm RGUI SEMI  &kp APOS
 &kp LSHFT   &kp Z        &kp X        &kp C         &kp V          &kp B        &kp N        &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp ENTER
-                                      &ltkp 2 TAB   &ltkp 3 SPACE  &ltkp 4 DEL  &ltkp 5 DEL  &ltkp 6 BSPC  &ltkp 7 CAPS
+                                      &ltkp 1 TAB   &ltkp 2 SPACE  &ltkp 3 DEL  &ltkp 4 DEL  &ltkp 5 BSPC  &ltkp 6 CAPS
             >;
-            display-name = "WBASE";
-        };
-
-        base_mac_layer {
-            bindings = <
-&trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp LGUI  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                          &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-            display-name = "MBASE";
+            display-name = "QWERTY";
         };
 
         number_layer {
@@ -188,10 +121,10 @@
 
         settings_layer {
             bindings = <
-&out OUT_USB  &bt BT_SEL 0   &bt BT_SEL 1       &bt BT_SEL 2      &bt BT_SEL 3     &bt BT_SEL 4  &bt BT_SEL 0  &bt BT_SEL 1       &bt BT_SEL 2      &bt BT_SEL 3     &bt BT_SEL 4   &out OUT_USB
-&out OUT_BLE  &kp C_BRI_UP   &kp C_PREV         &kp C_PLAY_PAUSE  &kp C_NEXT       &trans        &trans        &kp C_PREV         &kp C_PLAY_PAUSE  &kp C_NEXT       &kp C_BRI_UP   &out OUT_BLE
-&kp C_PWR     &kp C_BRI_DN   &kp C_VOLUME_DOWN  &kp C_MUTE        &kp C_VOLUME_UP  &trans        &trans        &kp C_VOLUME_DOWN  &kp C_MUTE        &kp C_VOLUME_UP  &kp C_BRI_DN   &kp C_PWR
-                                                &trans            &trans           &trans        &trans        &trans             &trans
+&out OUT_TOG  &bt BT_SEL 0   &bt BT_SEL 1       &bt BT_SEL 2      &bt BT_SEL 3     &bt BT_SEL 4  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3    &bt BT_SEL 4     &out OUT_USB
+&bootloader   &kp C_BRI_UP   &kp C_VOLUME_DOWN  &kp C_MUTE        &kp C_VOLUME_UP  &trans        &sys_reset     &caps_word     &key_repeat    &rgb_ug RGB_ON  &rgb_ug RGB_OFF  &bootloader
+&bt BT_CLR    &kp C_BRI_DN   &kp C_PREV         &kp C_PLAY_PAUSE  &kp C_NEXT       &trans        &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3   &bt BT_DISC 4    &out OUT_BLE
+                                                &trans            &trans           &trans        &trans         &trans             &trans
             >;
             display-name = "SETTING";
         };
