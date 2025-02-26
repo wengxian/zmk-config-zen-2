@@ -121,10 +121,10 @@
 
         settings_layer {
             bindings = <
-&out OUT_TOG  &bt BT_SEL 0   &bt BT_SEL 1       &bt BT_SEL 2      &bt BT_SEL 3     &bt BT_SEL 4  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3    &bt BT_SEL 4     &out OUT_USB
-&bootloader   &kp C_BRI_UP   &kp C_VOLUME_DOWN  &kp C_MUTE        &kp C_VOLUME_UP  &trans        &sys_reset     &caps_word     &key_repeat    &rgb_ug RGB_ON  &rgb_ug RGB_OFF  &bootloader
-&bt BT_CLR    &kp C_BRI_DN   &kp C_PREV         &kp C_PLAY_PAUSE  &kp C_NEXT       &trans        &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3   &bt BT_DISC 4    &out OUT_BLE
-                                                &trans            &trans           &trans        &trans         &trans             &trans
+&out OUT_TOG  &bt BT_SEL 0   &bt BT_SEL 1       &bt BT_SEL 2      &bt BT_SEL 3     &bt BT_SEL 4     &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3    &bt BT_SEL 4     &out OUT_USB
+&bootloader   &kp C_BRI_UP   &kp C_VOLUME_DOWN  &kp C_MUTE        &kp C_VOLUME_UP  &sys_reset       &sys_reset     &caps_word     &key_repeat    &rgb_ug RGB_ON  &rgb_ug RGB_OFF  &bootloader
+&bt BT_CLR    &kp C_BRI_DN   &kp C_PREV         &kp C_PLAY_PAUSE  &kp C_NEXT       &rgb_ug RGB_TOG  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3   &bt BT_DISC 4    &out OUT_BLE
+                                                &trans            &trans           &trans           &trans         &trans             &trans
             >;
             display-name = "SETTING";
         };
