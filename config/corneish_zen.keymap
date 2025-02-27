@@ -7,6 +7,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 #define COMBO_DEFAULT_TIMEOUT_MS 15
@@ -14,15 +16,15 @@
 #define COMBO_PRIOR_IDLE_MS 125
 
 &mmv {
-  acceleration-exponent = <1>;      // 1
-  time-to-max-speed-ms = <500>;     // 300
-  delay-ms = <0>;                   // 0
+    acceleration-exponent = <1>;      // 1
+    time-to-max-speed-ms = <500>;     // 300
+    delay-ms = <0>;                   // 0
 };
 
 &msc {
-  acceleration-exponent = <1>;      // 0
-  time-to-max-speed-ms = <40>;      // 300
-  delay-ms = <0>;                   // 0
+    acceleration-exponent = <1>;      // 0
+    time-to-max-speed-ms = <40>;      // 300
+    delay-ms = <0>;                   // 0
 };
 
 / {
@@ -30,15 +32,35 @@
         compatible = "zmk,behavior-hold-tap";
         #binding-cells = <2>;
         bindings = <&mo>, <&kp>;
+
         flavor = "tap-preferred";
         tapping-term-ms = <300>;
         quick-tap-ms = <300>;
         require-prior-idle-ms = <125>;
     };
 
-    hrm: hrm {
+    hrmr: hrmr {
         compatible = "zmk,behavior-hold-tap";
         bindings = <&kp>, <&kp>;
+
+        #binding-cells = <2>;
+        tapping-term-ms = <200>;
+        flavor = "tap-preferred";
+    };
+
+    hrml: hrml {
+        compatible = "zmk,behavior-hold-tap";
+        bindings = <&kp>, <&kp>;
+
+        #binding-cells = <2>;
+        tapping-term-ms = <200>;
+        flavor = "tap-preferred";
+    };
+
+    fn: fn {
+        compatible = "zmk,behavior-hold-tap";
+        bindings = <&kp>, <&kp>;
+
         #binding-cells = <2>;
         tapping-term-ms = <200>;
         flavor = "tap-preferred";
@@ -76,76 +98,86 @@
         };
     };
 
+    behaviors {
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         base_layer {
             bindings = <
-&kp ESC     &kp Q        &kp W        &kp E         &kp R          &kp T        &kp Y        &kp U         &kp I         &kp O        &kp P           &kp GRAVE
-&kp BSPC    &hrm LGUI A  &hrm LALT S  &hrm LCTRL D  &hrm LSHFT F   &kp G        &kp H        &hrm RSHFT J  &hrm RCTRL K  &hrm RALT L  &hrm RGUI SEMI  &kp APOS
-&kp LSHFT   &kp Z        &kp X        &kp C         &kp V          &kp B        &kp N        &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp ENTER
-                                      &ltkp 1 TAB   &ltkp 2 SPACE  &ltkp 3 DEL  &ltkp 4 DEL  &ltkp 5 BSPC  &ltkp 6 CAPS
+&kp ESC    &kp Q         &kp W         &kp E          &kp R          &kp T          &kp Y        &kp U          &kp I          &kp O         &kp P            &kp GRAVE
+&kp BSPC   &hrmr LGUI A  &hrmr LALT S  &hrmr LCTRL D  &hrmr LSHFT F  &kp G          &kp H        &hrml RSHFT J  &hrml RCTRL K  &hrml RALT L  &hrml RGUI SEMI  &fn CAPS APOS
+&kp LSHFT  &kp Z         &kp X         &kp C          &kp V          &kp B          &kp N        &kp M          &kp COMMA      &kp DOT       &kp FSLH         &kp ENTER
+                                       &ltkp 1 TAB    &ltkp 2 SPACE  &ltkp 3 DEL    &ltkp 4 DEL  &ltkp 5 BSPC   &ltkp 6 TAB
             >;
+
             display-name = "QWERTY";
         };
 
         number_layer {
             bindings = <
-&trans  &kp ASTRK        &kp N7        &kp N8         &kp N9         &kp N0     &kp KP_NUM  &kp KP_N7         &kp KP_N8         &kp KP_N9        &kp KP_N0        &trans
-&trans  &hrm LGUI MINUS  &hrm LALT N4  &hrm LCTRL N5  &hrm LSHFT N6  &kp PLUS   &trans      &hrm RSHFT KP_N4  &hrm RCTRL KP_N5  &hrm RALT KP_N6  &hrm RGUI COMMA  &trans
-&trans  &kp SLASH        &kp N1        &kp N2         &kp N3         &kp EQUAL  &trans      &kp KP_N1         &kp KP_N2         &kp KP_N3        &kp DOT          &trans
-                                       &trans         &trans         &trans     &trans      &trans            &trans
+&trans  &kp ASTRK         &kp N7         &kp N8          &kp N9          &kp N0       &kp KP_NUM  &kp KP_N7          &kp KP_N8          &kp KP_N9         &kp KP_N0         &trans
+&trans  &hrmr LGUI MINUS  &hrmr LALT N4  &hrmr LCTRL N5  &hrmr LSHFT N6  &kp PLUS     &trans      &hrml RSHFT KP_N4  &hrml RCTRL KP_N5  &hrml RALT KP_N6  &hrml RGUI COMMA  &trans
+&trans  &kp SLASH         &kp N1         &kp N2          &kp N3          &kp EQUAL    &trans      &kp KP_N1          &kp KP_N2          &kp KP_N3         &kp DOT           &trans
+                                         &trans          &trans          &trans       &trans      &trans             &trans
             >;
+
             display-name = "NUMBER";
         };
 
         navi_layer {
             bindings = <
-&trans  &kp INS  &kp HOME  &kp UP    &kp END    &kp PG_UP  &kp EQUAL  &kp N7         &kp N8         &kp N9        &kp N0           &trans
-&trans  &trans   &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN  &kp COMMA  &hrm RSHFT N4  &hrm RCTRL N5  &hrm RALT N6  &hrm RGUI ASTRK  &trans
-&trans  &trans   &trans    &trans    &trans     &trans     &kp DOT    &kp N1         &kp N2         &kp N3        &trans           &trans
-                           &trans    &trans     &trans     &trans     &trans         &trans
+&trans  &kp INS  &kp HOME  &kp UP    &kp END    &kp PG_UP    &kp EQUAL  &kp N7          &kp N8          &kp N9         &kp N0            &trans
+&trans  &trans   &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN    &kp COMMA  &hrml RSHFT N4  &hrml RCTRL N5  &hrml RALT N6  &hrml RGUI ASTRK  &kp CAPS
+&trans  &trans   &trans    &trans    &trans     &trans       &kp DOT    &kp N1          &kp N2          &kp N3         &trans            &trans
+                           &trans    &trans     &trans       &trans     &trans          &trans
             >;
+
             display-name = "NAVI";
         };
 
         fkeys_layer {
             bindings = <
-&trans  &kp F12  &kp F7  &kp F8  &kp F9  &kp PSCRN        &trans  &trans      &trans     &trans    &trans    &trans
-&trans  &kp F11  &kp F4  &kp F5  &kp F6  &kp SLCK         &trans  &kp RSHIFT  &kp RCTRL  &kp RALT  &kp RGUI  &trans
-&trans  &kp F10  &kp F1  &kp F2  &kp F3  &kp PAUSE_BREAK  &trans  &trans      &trans     &trans    &trans    &trans
-                         &trans  &trans  &trans           &trans  &trans      &trans
+&trans  &kp F12  &kp F7  &kp F8  &kp F9  &kp PSCRN          &trans  &trans      &trans     &trans    &trans    &trans
+&trans  &kp F11  &kp F4  &kp F5  &kp F6  &kp SLCK           &trans  &kp RSHIFT  &kp RCTRL  &kp RALT  &kp RGUI  &trans
+&trans  &kp F10  &kp F1  &kp F2  &kp F3  &kp PAUSE_BREAK    &trans  &trans      &trans     &trans    &trans    &trans
+                         &trans  &trans  &trans             &trans  &trans      &trans
             >;
+
             display-name = "FKEYS";
         };
 
         settings_layer {
             bindings = <
-&out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1       &bt BT_SEL 2      &bt BT_SEL 3     &bt BT_SEL 4     &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3    &bt BT_SEL 4     &out OUT_USB
-&bootloader   &kp C_BRI_UP  &kp C_VOLUME_DOWN  &kp C_MUTE        &kp C_VOLUME_UP  &sys_reset       &sys_reset     &caps_word     &key_repeat    &rgb_ug RGB_ON  &rgb_ug RGB_OFF  &bootloader
-&bt BT_CLR    &kp C_BRI_DN  &kp C_PREV         &kp C_PLAY_PAUSE  &kp C_NEXT       &rgb_ug RGB_TOG  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3   &bt BT_DISC 4    &out OUT_BLE
-                                                &trans            &trans           &trans           &trans         &trans             &trans
+&out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1       &bt BT_SEL 2      &bt BT_SEL 3     &bt BT_SEL 4       &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3    &bt BT_SEL 4     &out OUT_USB
+&bootloader   &kp C_BRI_UP  &kp C_VOLUME_DOWN  &kp C_MUTE        &kp C_VOLUME_UP  &sys_reset         &sys_reset     &caps_word     &key_repeat    &rgb_ug RGB_ON  &rgb_ug RGB_OFF  &bootloader
+&bt BT_CLR    &kp C_BRI_DN  &kp C_PREV         &kp C_PLAY_PAUSE  &kp C_NEXT       &rgb_ug RGB_TOG    &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3   &bt BT_DISC 4    &out OUT_BLE
+                                               &trans            &trans           &trans             &trans         &trans         &trans
             >;
+
             display-name = "SETTING";
         };
 
         sym_layer {
             bindings = <
-&trans  &trans  &kp AMPS  &kp ASTRK  &kp LPAR   &kp RPAR  &kp PLUS   &kp MINUS  &kp LBRC  &kp RBRC  &trans     &kp TILDE
-&trans  &trans  &kp DLLR  &kp PRCNT  &kp CARET  &kp PIPE  &kp EQUAL  &kp UNDER  &kp LBKT  &kp RBKT  &kp COLON  &kp DQT
-&trans  &trans  &kp EXCL  &kp AT     &kp HASH   &kp BSLH  &kp EXCL   &kp QMARK  &kp LT    &kp GT    &trans     &trans
-                          &trans     &trans     &trans    &trans     &trans     &trans
+&trans  &trans  &kp AMPS  &kp ASTRK  &kp LPAR   &kp RPAR    &kp PLUS   &kp MINUS  &kp LBRC  &kp RBRC  &trans     &kp TILDE
+&trans  &trans  &kp DLLR  &kp PRCNT  &kp CARET  &kp PIPE    &kp EQUAL  &kp UNDER  &kp LBKT  &kp RBKT  &kp COLON  &kp DQT
+&trans  &trans  &kp EXCL  &kp AT     &kp HASH   &kp BSLH    &kp EXCL   &kp QMARK  &kp LT    &kp GT    &trans     &trans
+                          &trans     &trans     &trans      &trans     &trans     &trans
             >;
+
             display-name = "SYMBOL";
         };
 
         mouse_layer {
             bindings = <
-&trans  &trans  &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP    &trans  &trans          &msc SCRL_UP    &trans           &trans  &trans
-&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans  &trans
-&trans  &trans  &trans          &trans          &trans           &trans          &trans  &mkp LCLK       &mkp MCLK       &mkp RCLK        &trans  &trans
-                                &mkp MCLK       &mkp LCLK        &mkp RCLK       &trans  &trans          &trans
+&trans  &trans  &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP      &trans  &trans          &msc SCRL_UP    &trans           &trans  &trans
+&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN    &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans  &trans
+&trans  &trans  &trans          &trans          &trans           &trans            &trans  &mkp LCLK       &mkp MCLK       &mkp RCLK        &trans  &trans
+                                &mkp MCLK       &mkp LCLK        &mkp RCLK         &trans  &trans          &trans
             >;
+
             display-name = "MOUSE";
         };
     };
