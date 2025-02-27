@@ -129,7 +129,7 @@
         navi_layer {
             bindings = <
 &trans  &kp INS  &kp HOME  &kp UP    &kp END    &kp PG_UP    &kp EQUAL  &kp N7          &kp N8          &kp N9         &kp N0            &trans
-&trans  &trans   &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN    &kp COMMA  &hrml RSHFT N4  &hrml RCTRL N5  &hrml RALT N6  &hrml RGUI ASTRK  &kp CAPS
+&trans  &trans   &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN    &kp COMMA  &hrml RSHFT N4  &hrml RCTRL N5  &hrml RALT N6  &hrml RGUI ASTRK  &trans
 &trans  &trans   &trans    &trans    &trans     &trans       &kp DOT    &kp N1          &kp N2          &kp N3         &trans            &trans
                            &trans    &trans     &trans       &trans     &trans          &trans
             >;
