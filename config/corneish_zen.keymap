@@ -229,7 +229,7 @@
             sensor-bindings = <&scroll_encoder>;
         };
 
-        ios_base_layer {
+        iphone_base_layer {
             bindings = <
 &trans  &trans  &trans  &trans  &trans         &trans    &trans  &trans  &trans        &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans         &trans    &trans  &trans  &trans        &trans  &trans  &trans
